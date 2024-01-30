@@ -1,0 +1,265 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif, Helvetica,
+    sans-serif;
+}
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-thumb {
+  background: #00f;
+}
+.container {
+  padding: 0 20px;
+  max-width: 1320px;
+  margin: 0 auto;
+}
+
+header,
+header nav,
+header nav ul,
+header nav ul li {
+  display: flex;
+}
+header {
+  padding-left: 30px;
+  justify-content: space-between;
+  position: fixed;
+  background-color: #FFF;
+  width: 100%;
+}
+header .logo-container {
+  margin-left: 40px;
+}
+
+header .logo-container img {
+  width: 150px;
+}
+header nav ul {
+  list-style: none;
+}
+header nav ul li {
+  padding: 15px 20px;
+  align-items: center;
+}
+header nav ul li:last-child{
+  padding: 0;
+}
+header nav ul a {
+  position: relative;
+  color: #222;
+  text-decoration: none;
+}
+
+.nav-borders li:hover .nav-border::after {
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 1.5px;
+  content: "";
+  -webkit-transition: width 0.3s linear;
+  -o-transition: width 0.3s linear;
+  transition: width 0.3s linear;
+  animation: widthAnimation 0.5s ease-in-out forwards;
+  background: -webkit-linear-gradient(0, #00f3ff 0, #0e4ef9 40%, #00ff58 100%);
+}
+@keyframes widthAnimation {
+  from {
+    width: 0%; /* Starting width */
+  }
+  to {
+    width: 100%; /* Ending width */
+  }
+}
+header .contact-btn {
+  text-decoration: none;
+  padding: 20px 40px;
+  background-color: #000;
+  color: #fff;
+  font-size: 20px;
+}
+
+header .hamburger,
+header .close-icon{
+  display: none;
+}
+
+/* Intro Page Style */
+.intro-bg {
+  height: 100vh;
+  background: url("/InfoVision-Clone-/images/Generative\ AI.webp");
+  background-size: cover;
+}
+
+.intro-content {
+  max-width: 500px;
+  border-radius: 8px;
+  padding: 40px;
+  color: #fff;
+  background-color: #0e4ef9;
+}
+.intro-content h1 {
+  font-weight: 400;
+  font-size: 46px;
+  line-height: 3rem;
+  margin-bottom: 20px;
+}
+.intro-content a {
+  text-decoration: none;
+  font-size: 18px;
+  color: #fff;
+}
+.intro-bg .container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+/* Features Page style */
+.features {
+  padding: 50px 20px;
+}
+.features .content {
+  display: flex;
+  margin: 40px 0;
+}
+.features .content > div {
+  width: 40%;
+  display: flex;
+  gap: 20px;
+}
+.features .content h3 {
+  font-size: 44px;
+}
+.features .content p {
+  font-size: 24px;
+}
+.features h2 {
+  margin-top: 30px;
+  font-size: 70px;
+  font-weight: 400;
+}
+.features a {
+  text-decoration: none;
+  font-size: 70px;
+}
+.features a:hover {
+  width: 500px;
+  /* transform: scaleX(2); */
+  transition: all ease 1s;
+}
+
+/* Footer */
+footer .follow-bg {
+  padding: 30px 0px;
+  background-color: #222;
+}
+footer .footer-bg {
+  padding: 20px;
+  background-color: #111;
+}
+footer .follow-bg .container {
+  display: flex;
+  justify-content: right;
+}
+footer .follow-bg h2 {
+  padding: 20px 10px;
+  color: #fff;
+  font-size: 22px;
+  font-weight: 400;
+}
+footer .follow-bg .icons {
+  display: flex;
+  align-items: center;
+}
+footer .follow-bg a {
+  color: #fff;
+  font-size: 26px;
+  padding: 4px 8px;
+}
+footer .footer-bg .nav-heading {
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: 20px;
+  color: #fff;
+  position: relative;
+  
+}
+footer .footer-bg .nav-heading::after{
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 100%;
+  height: 1.5px;
+  content: "";
+  -webkit-transition: width 0.3s linear;
+  -o-transition: width 0.3s linear;
+  transition: width 0.3s linear;
+  animation: widthAnimation 0.5s ease-in-out forwards;
+  background: -webkit-linear-gradient(0, #00f3ff 0, #0e4ef9 40%, #00ff58 100%);
+}
+footer .footer-bg,
+footer a {
+  color: #BBB;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+}
+.footer-nav .hq {
+  max-width: 250px;
+  margin-top: 20px;
+  padding-right: 20px;
+  border-right: 1px solid #444;
+}
+footer .footer-nav,
+footer .footer-nav .extra > ul {
+  display: flex;
+  gap: 40px;  
+}
+footer .footer-nav .extra{
+  width: 100%;
+}
+footer .footer-nav .extra>ul{
+  justify-content: space-between;
+}
+footer .extra a{
+  position: relative;
+}
+
+.footer-nav .address{
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+.extra li {
+  padding: 10px 0;
+}
+.extra .nav-heading{
+  padding: 0;
+  margin: 0;
+}
+footer hr{
+  margin: 30px 0;
+  border: 1px solid #777;
+}
+footer .copyright {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+footer .copyright a {
+    padding-right: 20px;
+}
+footer .copyright a:hover{
+  text-decoration: underline;
+}
+footer .copyright p{
+  color: #FFF;
+  font-size: 16px;
+  font-weight: 400;
+}
